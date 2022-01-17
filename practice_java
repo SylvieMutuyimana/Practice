@@ -1,0 +1,48 @@
+
+import java.util.*;
+public class Add_multiply_substract_divide {
+	public static void main(String[] args){
+		int Math;
+		int Chemistry;
+		int Physics;
+		int Biology;
+		int English;
+		int count = 0;
+		float Sciences;
+		String Student_ID;
+		while (count < 5){
+			Scanner user_input = new Scanner(System.in);		
+			System.out.println("Enter Student ID: ");
+			Student_ID = user_input.next();
+			System.out.println("Enter Chemistry score: ");
+			if(user_input.nextInt() > 100){
+				System.out.println("Enter correct Chemistry score: ");}
+			Chemistry = user_input.nextInt();
+			System.out.println("Enter Physics score: ");
+			if (user_input.nextInt() > 100){
+				System.out.print("Enter correct Physics score: ");}
+			Physics = user_input.nextInt();
+			System.out.println("Enter Biology score: ");
+			if (user_input.nextInt() > 100){System.out.print("Enter correct Biology score: ");}
+			Biology = user_input.nextInt();
+			Sciences = (Chemistry + Physics + Biology)/ 3;
+			System.out.print("Student ID: "); System.out.println(Student_ID);
+			System.out.print("Sciences score = "); System.out.println(Sciences);
+			if (Sciences < 50){
+				System.out.print("Enter  Math score: ");
+				//if (user_input.nextInt() > 100){
+				//	System.out.print("Enter correct Math score: ");}
+				if (user_input.nextInt() < 100){Math = user_input.nextInt(); }
+				System.out.print("Math score = "); System.out.println(Math);} 
+			else{
+				System.out.print("Enter  English score: ");
+				if (user_input.nextInt() > 100){System.out.println("Enter correct English score: ");}
+				English = user_input.nextInt();
+				System.out.print("English score = "); System.out.println(English);}	
+			float total = Sciences + Math + English;
+			// The variables Math and English are inside if statements, when pulled out if statements they worked, but not when inside.
+			count = count + 1;
+		}
+	}
+
+}
